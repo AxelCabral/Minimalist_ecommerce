@@ -5,6 +5,8 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isSwitched = false;
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
@@ -29,14 +31,19 @@ class SettingsPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.tertiary,
                     borderRadius: BorderRadius.circular(12)),
-                child: Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Text(
-                    'Dark Mode',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: Text(
+                        'Dark Mode',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      ),
                     ),
-                  ),
+                    Switch(value: isSwitched, onChanged: (value) {})
+                  ],
                 ),
               ))),
     );
