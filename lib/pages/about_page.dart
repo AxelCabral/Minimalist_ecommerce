@@ -21,19 +21,22 @@ class AboutPage extends StatelessWidget {
           child: Container(
         width: 500,
         alignment: Alignment.topLeft,
-        child: const Column(
-          children: [
-            Text(
-              'About',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.left,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Minimal stylish ecommerce using clean aspects, builded on a flutter masterclass from Mitch Koko, connect with backend to use.',
-              style: TextStyle(fontSize: 14),
-            ),
-          ],
+        child: const Padding(
+          padding: EdgeInsets.all(25.0),
+          child: Column(
+            children: [
+              Text(
+                'About',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Minimal stylish ecommerce using clean aspects, builded on a flutter masterclass from Mitch Koko, connect with backend to use.',
+                style: TextStyle(fontSize: 14),
+              ),
+            ],
+          ),
         ),
       )),
     );

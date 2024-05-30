@@ -26,24 +26,31 @@ class SettingsPage extends StatelessWidget {
               width: 500,
               margin: const EdgeInsets.only(top: 20),
               alignment: Alignment.topLeft,
-              child: Container(
-                width: 700,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.tertiary,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(25.0),
-                      child: Text(
-                        'Dark Mode',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
+              child: Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Container(
+                  width: 700,
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.tertiary,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: Text(
+                          'Dark Mode',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
                         ),
                       ),
-                    ),
-                    Switch(value: isSwitched, onChanged: (value) {})
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15),
+                        child: Switch(value: isSwitched, onChanged: (value) {}),
+                      )
+                    ],
+                  ),
                 ),
               ))),
     );
