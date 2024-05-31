@@ -109,6 +109,7 @@ class MyProductTile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: IconButton(
+                  color: Colors.grey.shade900,
                   onPressed: () => addToCart(context),
                   icon: const Icon(Icons.add),
                 ),
